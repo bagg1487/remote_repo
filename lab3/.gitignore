@@ -1,0 +1,52 @@
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Executables
+*.exe
+*.out
+*.app
+*.exe
+benchmark
+test_*
+
+# Build directories
+build/
+bin/
+obj/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# OpenBLAS (если не используется как submodule)
+lab3/OpenBLAS/
+OpenBLAS/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Compiled output
+*.o
+*.d
+*.so
+*.so.*
+*.dylib
+*.dll
