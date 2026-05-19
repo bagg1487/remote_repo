@@ -25,4 +25,6 @@ jobs:
       run: make all
 
     - name: Run Performance Tests
-      run: make run
+      run: |
+        chmod +x ./benchmark
+        make run
