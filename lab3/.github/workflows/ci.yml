@@ -1,0 +1,24 @@
+name: BLAS CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential g++ libopenblas-dev libomp-dev
+
+    - name: Build Project
+      run: make all
+
+    - name: Run Performance Tests
+      run: make run
